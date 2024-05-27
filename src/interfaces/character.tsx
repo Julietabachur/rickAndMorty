@@ -7,5 +7,6 @@ export interface Character {
     episode: string[],
     genre: string,
     planet: string,
-    isFavorite:boolean
+    isFavorite:boolean,
+    species: string
   }

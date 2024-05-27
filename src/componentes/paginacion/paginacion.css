@@ -4,3 +4,18 @@
   justify-content: space-between;
   margin: 10px 0;
 }
+
+.paginationBtn {
+background-color:rgb(17 223 255);
+cursor: pointer;
+padding: 10px 20px;
+font-size: 16px;
+border: 0;
+border-radius: 5px;
+color: black;
+font-weight: bold;
+}
+
+.paginationBtn:hover{
+background-color: #c0d55d;
+}

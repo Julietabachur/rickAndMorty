@@ -18,15 +18,15 @@ const TarjetaPersonaje = ({character}) => {
     const dispatch = useAppDispatch()
 
     return (
-                <div className="tarjeta-personaje">
+                <div className="tarjeta-personaje card">
                     <Link to="/detalle" onClick={()=>{dispatch(setCharacterDetails(character))}}>
                         <img src={character.image} alt={character.name}/>
                     </Link>  
                     <div className="tarjeta-personaje-body">
-                    <Link to="/detalle" onClick={()=>{dispatch(setCharacterDetails(character))}} style={{textDecoration: 'none'}}>
-                        <span style={{color:'black', textDecoration: 'none'}}>{character.name}</span>
-                    </Link>  
-                        <BotonFavorito character={character} esFavorito={character.isFavorite} />
+                        <Link to="/detalle" onClick={()=>{dispatch(setCharacterDetails(character))}} style={{textDecoration: 'none'}}>
+                            <span style={{color:'#12a8bf', textDecoration: 'none'}}>{character.name}</span>
+                        </Link>  
+                        <BotonFavorito character={character} esFavorito={character.isFavorite} imgStyle={{fontSize: '30px', color: '#c0d55d'}}/>
                     </div>
                 </div>
     )

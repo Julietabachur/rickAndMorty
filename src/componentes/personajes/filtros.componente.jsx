@@ -25,8 +25,8 @@ const Filtros = () => {
 
 
     return <div className="filtros">
-        <label for="nombre">Filtrar por nombre:</label>
-        <input type="text" placeholder="Rick, Morty, Beth, Alien, ...etc" name="nombre" value={name} onChange={handleInputFilter}/>
+        <label htmlFor="nombre" className='title'>Busca tu personaje favorito por nombre:</label>
+        <input type="text" placeholder="Rick, Morty, Beth, Alien, ...etc" name="nombre" id="nombre" value={name} onChange={handleInputFilter}/>
     </div>
 }
 

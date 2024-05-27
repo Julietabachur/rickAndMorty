@@ -1,13 +1,16 @@
 .detalle {
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 255, 255, 0.4); 
+    border-radius: 150px;
 }
 
 .detalle-header {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items:center;
+    justify-content:space-between;
+    padding-right: 6rem;
 }
 
 .detalle-header-texto {

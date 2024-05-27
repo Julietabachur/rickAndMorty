@@ -13,13 +13,15 @@ const Encabezado = () => {
     return <header>
             <div>
                 <div>
-                    <h2>Examen Final de Frontend IV</h2>
+                    <Link  to="/" >
+                        <img src="imagenes/logo.png" alt="Rick and Morty" />
+                    </Link>
                 </div>
                 <nav>
                     <ul>
                         <li><Link to="/">Inicio</Link></li>
                         <li><Link to="/favoritos">Favoritos</Link></li>
-                        <li><Link to="/detalle">Detalle</Link></li>
+                        {/* <li><Link to="/detalle">Detalle</Link></li> */}
                     </ul>
                 </nav>
             </div>

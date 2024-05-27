@@ -32,8 +32,8 @@ const Paginacion = () => {
       };
 
     return <div className="paginacion">
-        <button disabled={currentPage === 1  ? true : false} className={"primary"} onClick={goToPreviousPage}>Anterior</button>
-        <button disabled={false} className={"primary"} onClick={goToNextPage}>Siguiente</button>
+        <button disabled={currentPage === 1  ? true : false} className='paginationBtn btn ' onClick={goToPreviousPage}>Anterior</button>
+        <button disabled={false} className='paginationBtn btn ' onClick={goToNextPage}>Siguiente</button>
     </div>
 }
 

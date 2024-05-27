@@ -36,31 +36,38 @@ const PaginaDetalle = () => {
         });
     }, []);
 
-    return <div className="container">
-        <h3>{character.name}</h3>
-        <div className={"detalle"}>
-            <div className={"detalle-header"}>
-                <img src={character.image} alt="{character.name}"/>
-                <div className={"detalle-header-texto"}>
-                    <p>{character.name}</p>
-                    <p>Planeta: {character.origin.name}</p>
-                    <p>Genero: {character.gender}</p>
+return  (
+            <div className="container ">
+                <div className="detalle">
+                    <div className={"detalle-header "}>
+                        <img src={character.image} alt="{character.name}" style={{borderRadius:"50%"}}/>                        
+                        <div className={"detalle-header-texto"}>
+                            <p>{character.name}</p>
+                            <p>Género: {character.gender}</p>
+                            <p>Especie: {character.species}</p>
+                            <p>Planeta: {character.origin.name}</p>
+                        </div>
+                        <div className=" d-flex flex-column  justify-content-center align-items-center">
+                            <BotonFavorito character={character} esFavorito={character.isFavorite} imgStyle={{fontSize: '100px', color: '#c0d55d' }}/>
+                            <div>
+                                <p>Marcar como favorito</p>
+                            </div>
+                        </div>                        
+                    </div>
                 </div>
-                <BotonFavorito character={character} esFavorito={character.isFavorite} />
+                <h4>Lista de episodios donde apareció el personaje</h4>
+                <div className={"episodios-grilla"}>
+                    {
+                        stateStatus == 'loading' || stateStatus == 'rejected' ?
+                        <h3>{statusMessage}</h3>
+                        :
+                        episodes.map(episode =>(
+                            <TarjetaEpisodio key={episode.id} episode={episode} />
+                            ))
+                    }
+                </div>
             </div>
-        </div>
-        <h4>Lista de episodios donde apareció el personaje</h4>
-        <div className={"episodios-grilla"}>
-            {
-                stateStatus == 'loading' || stateStatus == 'rejected' ?
-                <h3>{statusMessage}</h3>
-                :
-                episodes.map(episode =>(
-                    <TarjetaEpisodio key={episode.id} episode={episode} />
-                ))
-            }
-        </div>
-    </div>
+        )
 }
 
 export default PaginaDetalle
