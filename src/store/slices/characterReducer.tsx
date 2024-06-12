@@ -33,7 +33,6 @@ export const charactersSlice = createSlice({
          * @param {PayloadAction<{ character: Character }>} action - La acción que contiene el personaje.
          */
         toggleFavorite: (state, action) => {
-            debugger
             const  favCharacter = action.payload.character
             const index = state.characters.findIndex(character => character.id === favCharacter.id);
             if (index !== -1) {

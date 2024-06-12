@@ -48,7 +48,7 @@ return  (
                             <p>Planeta: {character.origin.name}</p>
                         </div>
                         <div className=" d-flex flex-column  justify-content-center align-items-center">
-                            <BotonFavorito character={character} esFavorito={character.isFavorite} imgStyle={{fontSize: '100px', color: '#c0d55d' }}/>
+                            <BotonFavorito character={character} esFavorito={character.isFavorite} imgStyle={{fontSize: '100px', color: '#c0d55d', filter: 'drop-shadow(15px 20px 10px #4c8a00)' }}/>
                             <div>
                                 <p>Marcar como favorito</p>
                             </div>

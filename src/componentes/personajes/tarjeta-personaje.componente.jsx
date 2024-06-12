@@ -26,7 +26,7 @@ const TarjetaPersonaje = ({character}) => {
                         <Link to="/detalle" onClick={()=>{dispatch(setCharacterDetails(character))}} style={{textDecoration: 'none'}}>
                             <span style={{color:'#12a8bf', textDecoration: 'none'}}>{character.name}</span>
                         </Link>  
-                        <BotonFavorito character={character} esFavorito={character.isFavorite} imgStyle={{fontSize: '30px', color: '#c0d55d'}}/>
+                        <BotonFavorito character={character} esFavorito={character.isFavorite} imgStyle={{fontSize: '30px', color: '#c0d55d', filter: 'drop-shadow(15px 20px 10px #4c8a00)'}}/>
                     </div>
                 </div>
     )
