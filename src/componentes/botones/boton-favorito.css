@@ -1,3 +1,12 @@
 .boton-favorito {
   cursor: pointer;
+  transition: transform 0.3s;
 }
+
+.boton-favorito:hover {
+  transform: rotate(90deg);
+}
+/* 
+.boton-favorito svg {
+  border: 1px solid white;
+} */

@@ -9,13 +9,19 @@
   font-weight: 500;
 }
 
-.filtros input[type="text"]{
+.filtros input[type="text"] {
   flex-grow: 1;
-  padding: 15px 20px; 
+  padding: 15px 20px;
   border-radius: 3px;
   border: 1px solid #d0d0d0;
 }
 
-.title{
-  color:#12a8bf ;
+.title {
+  color: rgb(17 223 255);
+}
+
+@media (max-width: 720px) {
+  .filtros input[type="text"] {
+    padding: 10px 15px;
+  }
 }

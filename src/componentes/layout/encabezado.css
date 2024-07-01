@@ -1,7 +1,7 @@
 header {
   /* background-color: white; */
   border-bottom: 1px solid #d0d0d0;
-  width: calc(100% - 60px);
+  /* width: calc(100% - 60px); */
   color: black;
   padding: 25px 30px;
 }
@@ -13,8 +13,18 @@ header > div {
   align-items: center;
 }
 
-header > div h2{
-  margin: 0
+@media (max-width: 800px) {
+  header > div {
+    display: flex;
+    flex-direction: column;
+  }
+  header > div div a img {
+    width: 300px;
+  }
+}
+
+header > div h2 {
+  margin: 0;
 }
 
 header > div nav ul {
@@ -22,7 +32,6 @@ header > div nav ul {
   flex-direction: row;
   align-items: center;
 }
-
 
 header > div nav ul li {
   list-style: none;
@@ -32,7 +41,6 @@ header > div nav ul li a {
   padding: 5px 20px;
   text-decoration: none;
   color: rgb(17 223 255);
-  opacity: 0.8;
   font-size: 26px;
   font-weight: 500;
 }

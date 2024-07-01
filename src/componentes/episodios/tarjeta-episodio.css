@@ -1,13 +1,22 @@
 .tarjeta-episodio {
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  background-color: #c0d55d;
+  justify-content: space-between;
+  /* width: fit-content; */
+  background-color: black;
   padding: 10px 20px;
   border-radius: 20px;
+  flex-flow: column wrap;
+  border: 0.5px solid #c0d55d;
+  color: #c0d55d;
 }
 
-.tarjeta-episodio h4{
+.tarjeta-episodio:hover {
+  border: 0.5px solid rgb(17 223 255);
+  color: rgb(17 223 255);
+}
+
+.tarjeta-episodio h4 {
   margin: 0;
   margin-bottom: 10px;
 }

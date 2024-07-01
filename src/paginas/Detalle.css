@@ -1,39 +1,111 @@
+.container-detalle {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-detalle h3 {
+  color: rgb(17 223 255);
+  margin: 50px 0;
+}
+
 .detalle {
-    display: flex;
-    flex-direction: column;
-    /* background-color: rgba(0, 255, 255, 0.4);  */
-    background-color: black;
-    border-radius: 150px;
-    border: 3px solid #c0d55d;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 30px 20px rgba(17, 223, 255, 1);
+  background-color: black;
+  border-radius: 150px;
+  border: 1px solid black;
+  margin: 50px;
 }
 
 .detalle-header {
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content:space-between;
-    padding-right: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 6rem;
+}
+
+.star-detail {
+  font-size: 100px;
+  color: #c0d55d;
 }
 
 .detalle-header-texto {
-    margin-left: 30px;
-    font-size: 26px;
-    font-weight: 500;
-    color: #c0d55d;
+  margin-left: 30px;
+  font-size: 26px;
+  font-weight: 200;
+  color: rgba(17, 223, 255, 1);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.detalle-header-texto p{
-    margin-top: 0;
-    margin-bottom: 10px;
+.detalle-header-texto p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-
-.detalle-header-texto p:nth-child(1){
-    font-size: 32px;
+.detalle-header-texto p:nth-child(1) {
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .episodios-grilla {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+@media (max-width: 950px) {
+  .episodios-grilla {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .episodios-grilla {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 960px) {
+  .detalle {
+    width: fit-content;
+  }
+
+  .detalle-header-texto {
+    font-size: 20px;
+  }
+
+  .detalle-header-texto p:nth-child(1) {
+    font-size: 26px;
+  }
+
+  .detalle-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0%;
+    height: 750px;
+    padding-bottom: 80px;
+  }
+  .detalle-header-texto {
+    margin-left: 0px;
+  }
+
+  .container-detalle {
+    align-items: center;
+  }
+
+  .container-detalle h3 {
+    text-align: center;
+  }
 }

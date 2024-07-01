@@ -1,11 +1,19 @@
 .tarjeta-personaje {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(17 223 255);
+  background-color: black;
+  border: 0.5px solid rgb(40, 36, 36);
+  margin: 10px 0;
 }
 
-.tarjeta-personaje > a {
-padding: 5px;
+.tarjeta-personaje:hover {
+  box-shadow: 0px 0px 9px 5px rgba(17, 223, 255, 1);
+}
+
+.tarjeta-personaje-body > a span {
+  /* color: #c0d55d; */
+  text-decoration: none;
+  color: rgba(17, 223, 255, 1);
 }
 
 .tarjeta-personaje > a > img {
@@ -25,4 +33,11 @@ padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 960px) {
+  .tarjeta-personaje > a > img {
+    width: 250px;
+    height: 250px;
+  }
 }
